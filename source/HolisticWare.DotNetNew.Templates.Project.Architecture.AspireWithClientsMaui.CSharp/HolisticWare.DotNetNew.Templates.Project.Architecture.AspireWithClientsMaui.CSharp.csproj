@@ -1,0 +1,151 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- 
+    ==============================================================================================
+    Project
+      Build
+        Start
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RollForward>LatestMajor</RollForward>
+  </PropertyGroup>
+  <!-- 
+      Stop
+      Build
+    Project
+    ==============================================================================================
+    -->
+
+  <!-- 
+      ==============================================================================================
+      Packaging
+        Info
+          Start
+    -->
+  <PropertyGroup>
+    <PackOnBuild>true</PackOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <PackageOutputPath>..\..\..\output</PackageOutputPath>
+    <!-- 
+    Suppresses the warnings about the package not having assemblies in lib/*/.dll.
+    -->
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <!-- 
+    Change the default location where NuGet will put the build output 
+    
+        This changes the default folder where assemblies will be placed in the package.
+        The default is 'lib', but that is incorrect since these assemblies are mean to be used
+        by MSBuild, and to meant to be referenced as API from the NuGet package.
+    
+        tools/
+        tasks/
+    <BuildOutputTargetFolder>tools</BuildOutputTargetFolder>
+    -->
+    <!-- 
+    put the package output into a nuget test folder 
+    -->
+
+    <!-- 
+    nuget packaging
+    https://github.com/dotnet/maui/blob/main/src/Templates/src/Microsoft.Maui.Templates.csproj
+    -->
+    <PackageId>
+      HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui
+    </PackageId>
+    <Title>
+      HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui
+    </Title>
+    <summary>
+      dotnet new template for Aspire and client[s] - MAUI integration
+    </summary>
+    <Description>
+      dotnet new template for Aspire and client[s] - MAUI integration
+    </Description>
+    <Owners>moljac, HolisticWare, Xamarin, Microsoft</Owners>
+    <Authors>moljac, HolisticWare, Xamarin, Microsoft</Authors>
+    <Copyright>2024</Copyright>
+    <ProjectUrl>
+      https://github.com/HolisticWare-DotNet-New-Templates/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/
+    </ProjectUrl>
+    <RepositoryUrl>
+      https://github.com/HolisticWare-DotNet-New-Templates/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/blob/main/LICENSE
+    </RepositoryUrl>
+    <iconUrl>
+      https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
+    </iconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <!-- 
+    <PackageLicenseUrl>
+    https://github.com/HolisticWare-DotNet-New-Templates/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/blob/main/LICENSE
+    </PackageLicenseUrl>
+    -->
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageIconUrl>
+      https://github.com/HolisticWare-DotNet-New-Templates/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/blob/main/LICENSE
+    </PackageIconUrl>
+    <PackageProjectUrl>
+    </PackageProjectUrl>
+    <license>MIT</license>
+    <licenseUrl>
+      https://github.com/HolisticWare-DotNet-New-Templates/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/blob/main/LICENSE
+    </licenseUrl>
+    <VersionPrefix>$(VersionCompoundMain)</VersionPrefix>
+    <!--
+    VersionSuffix - For debugging and local nuget feed 
+    -->
+    <VersionSuffix>$(VersionCompoundSuffix)</VersionSuffix>
+    <PackageVersion>$(VersionPrefix)-$(VersionSuffix)</PackageVersion>
+    <PackageTags>
+      moljac, holisticware, microsoft,
+      aspire, maui,
+      template,
+      architecture,
+      project strucutre,
+    </PackageTags>
+  </PropertyGroup>
+  <!-- 
+          Stop
+        Info
+      Packaging
+      ==============================================================================================
+  -->
+
+  <!-- 
+    ==============================================================================================
+    Packaging
+      Extras
+        Start
+  -->
+  <PropertyGroup>
+    <!-- 
+      Keep package type as 'Template' to show the package as template package on nuget.org 
+      and make you template available in dotnet new search.
+    -->
+    <PackageType>Template</PackageType>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <LocalizeTemplates>false</LocalizeTemplates>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.TemplateEngine.Tasks" Version="*" PrivateAssets="all"
+      IsImplicitlyDefined="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="content\**\*" Exclude="content\**\bin\**;content\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+  <!-- 
+        Stop
+      Extras
+    Packaging
+    ==============================================================================================
+  -->
+
+</Project>
