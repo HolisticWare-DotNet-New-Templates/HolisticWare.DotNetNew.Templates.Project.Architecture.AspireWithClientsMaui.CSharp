@@ -1,0 +1,2 @@
+# HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp
+HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp
