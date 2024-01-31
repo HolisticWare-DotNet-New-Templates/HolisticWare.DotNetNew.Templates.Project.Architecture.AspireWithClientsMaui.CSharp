@@ -106,7 +106,7 @@
 	MAUI 
 	====================================================================================================================
 	-->
-
+	
 	<ItemGroup>
 		<ProjectReference Include="..\Clients.AppDefaults\Clients.AppDefaults.csproj" />
 	</ItemGroup>
