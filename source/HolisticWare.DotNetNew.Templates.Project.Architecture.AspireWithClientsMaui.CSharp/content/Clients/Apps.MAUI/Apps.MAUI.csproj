@@ -64,8 +64,9 @@
 
 	<!-- 
 	====================================================================================================================
-	MAUI integration
-		start
+	MAUI 
+		integration mandatory
+			start
 	-->
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
@@ -81,10 +82,6 @@
 			Include="Microsoft.Extensions.ServiceDiscovery"
 		  	Version="8.0.0-preview.2.23619.3" 
 			/>
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\Clients.AppDefaults\Clients.AppDefaults.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -104,9 +101,15 @@
 		</Content>
 	</ItemGroup>
 	<!-- 
-		stop
-	MAUI integration
+			stop
+		integration mandatory
+	MAUI 
 	====================================================================================================================
 	-->
+
+	<ItemGroup>
+		<ProjectReference Include="..\Clients.AppDefaults\Clients.AppDefaults.csproj" />
+	</ItemGroup>
+
 
 </Project>
