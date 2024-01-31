@@ -14,7 +14,7 @@
       Build
     Project
     ==============================================================================================
-    -->
+  -->
 
   <!-- 
       ==============================================================================================
@@ -83,7 +83,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageIconUrl>
-      https://github.com/HolisticWare-DotNet-New-Templates/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/blob/main/LICENSE
+      https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
     </PackageIconUrl>
     <PackageProjectUrl>
     </PackageProjectUrl>
@@ -106,10 +106,10 @@
     </PackageTags>
   </PropertyGroup>
   <!-- 
-          Stop
-        Info
-      Packaging
-      ==============================================================================================
+        Stop
+      Info
+    Packaging
+    ==============================================================================================
   -->
 
   <!-- 

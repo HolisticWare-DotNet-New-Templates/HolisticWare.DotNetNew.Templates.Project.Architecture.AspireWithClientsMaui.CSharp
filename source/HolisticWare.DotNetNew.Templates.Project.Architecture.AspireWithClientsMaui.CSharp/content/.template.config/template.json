@@ -1,21 +1,27 @@
 {
+    // https://dotnetnew.azurewebsites.net/
     "$schema": "http://json.schemastore.org/template",
     "author": "HolisticWare/Xamarin/Microsoft moljac Miljenko Mel Cvjetko",
     "classifications":
         [
             // Tags used to search for the template.
             "Custom Templates",
+            "Microsoft",
             "Xamarin",
             "HolisticWare",
             "Cross Platform",
-            "xplat"
+            "xplat",
+            "architecture",
+            "cloud",
+            "productivity",
+            "experimental",
         ],
-    "groupIdentity": "HolisticWare.Tools.ProjectTemplates",
-    "name": "Custom template for Xamarin cross platform libraries and bindings",
+    "groupIdentity": "HolisticWare.Tools.Templates",
+    "name": "Custom template for Aspire and clients MAUI integration",
     // A unique ID for the project template.
-    "identity": "HolisticWare.DotNetNew.XamarinProjectsStructureTemplate.CSharp",
+    "identity": "HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp",
     // for commandline project creation
-    "shortName": "hw-structure",
+    "shortName": "hw-aspire-clients-maui",
     // replacement guids - used in the projects that will be replaced by new ones
     // find . -name *.csproj -exec grep ProjectGuid {} \;
     "guids":
