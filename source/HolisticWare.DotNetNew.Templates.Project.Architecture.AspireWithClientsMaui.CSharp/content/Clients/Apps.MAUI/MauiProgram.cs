@@ -15,10 +15,20 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+            var wrapperMauiAppBuilder = new WrapperMauiAppBuilder(mauiAppBuilder);
+
+            wrapperMauiAppBuilder.AddAppDefaults();
+
 #if DEBUG
-		builder.Logging.AddDebug();
+            wrapperMauiAppBuilder.Logging.AddDebug();
 #endif
 
-		return builder.Build();
+            var scheme = wrapperMauiAppBuilder.Environment.IsDevelopment() ? "http" : "https";
+            //wrapperMauiAppBuilder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://apiservice"));
+            wrapperMauiAppBuilder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://localhost:5303"));
+            wrapperMauiAppBuilder.Services.AddSingleton<MainPage>();
+
+
+            return wrapperMauiAppBuilder.Build();
 	}
 }
