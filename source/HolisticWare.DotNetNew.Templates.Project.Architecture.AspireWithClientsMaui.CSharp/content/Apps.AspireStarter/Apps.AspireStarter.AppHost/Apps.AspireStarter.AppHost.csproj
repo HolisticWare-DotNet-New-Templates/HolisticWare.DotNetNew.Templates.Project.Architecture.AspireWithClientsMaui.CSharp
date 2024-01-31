@@ -28,4 +28,10 @@
       />
   </ItemGroup>
 
+	<ItemGroup>
+    <PackageReference Include="HolisticWare.Tools.Devices" Version="0.0.1-alpha-20240131120558" />
+    <PackageReference Include="HolisticWare.Tools.Aspire.Hosting.Clients.Maui" Version="0.0.1-alpha-20240131121311" />
+  </ItemGroup>
+
+
 </Project>
