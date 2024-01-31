@@ -12,6 +12,15 @@ output/
 ## MacOSX
 **/.DS_Store
 
+# IDEs - Visual Studio
+**/.vs
+
+# IDEs - Rider
+**/.idea
+
+# Visual Studio Code Extensions
+**/.metor
+
 # Cake
 tools/
 
