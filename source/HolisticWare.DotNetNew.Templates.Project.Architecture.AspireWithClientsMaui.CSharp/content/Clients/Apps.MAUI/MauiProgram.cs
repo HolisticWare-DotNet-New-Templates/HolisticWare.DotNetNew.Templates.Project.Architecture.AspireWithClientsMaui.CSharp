@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using HolisticWare.Aspire.Hosting.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace Apps.MAUI;
 
@@ -15,7 +16,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-            var wrapperMauiAppBuilder = new WrapperMauiAppBuilder(mauiAppBuilder);
+            var wrapperMauiAppBuilder = new WrapperMauiAppBuilder(builder);
 
             wrapperMauiAppBuilder.AddAppDefaults();
 
@@ -24,8 +25,8 @@ public static class MauiProgram
 #endif
 
             var scheme = wrapperMauiAppBuilder.Environment.IsDevelopment() ? "http" : "https";
-            //wrapperMauiAppBuilder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://apiservice"));
-            wrapperMauiAppBuilder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://localhost:5303"));
+            // wrapperMauiAppBuilder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://apiservice"));
+            // wrapperMauiAppBuilder.Services.AddHttpClient<WeatherApiClient>(client => client.BaseAddress = new($"{scheme}://localhost:5303"));
             wrapperMauiAppBuilder.Services.AddSingleton<MainPage>();
 
 

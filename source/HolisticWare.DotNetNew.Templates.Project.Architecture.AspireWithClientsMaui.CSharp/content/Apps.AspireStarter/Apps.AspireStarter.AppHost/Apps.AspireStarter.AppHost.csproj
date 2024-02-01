@@ -22,7 +22,7 @@
   -->
   <ItemGroup>
     <ProjectReference 
-      Include="..\..\Clients\Apps.MAUI\Apps.MAUI.csproj" 
+      Include="..\..\Clients\Apps.MAUI\Apps.MAUI.csproj"
       SkipGetTargetFrameworkProperties="true"
       ReferenceOutputAssembly="false"
       />
