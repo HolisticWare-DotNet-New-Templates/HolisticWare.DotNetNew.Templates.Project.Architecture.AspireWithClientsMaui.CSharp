@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+using HolisticWare.Aspire.Hosting.Maui;
+
 namespace ClientAppsIntegration.MAUI
 {
     public static class MauiProgram

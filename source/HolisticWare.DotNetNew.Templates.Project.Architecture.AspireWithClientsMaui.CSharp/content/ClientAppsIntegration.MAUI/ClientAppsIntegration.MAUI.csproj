@@ -100,6 +100,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="HolisticWare.Tools.Clients.Maui.Aspire.Integration" Version="0.0.1-alpha-20240202130217" />
+	</ItemGroup>
+		<ItemGroup>
 		<Using Include="System.Net.Http" />
 		<Using Include="System.Net.Http.Json" />
 		<Using Include="Microsoft.Extensions.Hosting" />
