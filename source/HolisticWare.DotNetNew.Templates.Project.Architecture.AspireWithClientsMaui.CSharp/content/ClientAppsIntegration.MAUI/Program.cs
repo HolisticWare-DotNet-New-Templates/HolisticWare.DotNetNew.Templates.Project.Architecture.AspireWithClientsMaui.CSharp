@@ -30,7 +30,7 @@ internal class Program
         //  start
         HostApplicationBuilder builder = Host.CreateApplicationBuilder();
 
-        builder.AddAppDefaults();
+        // builder.AddAppDefaults();
         
         string scheme = builder.Environment.IsDevelopment() ? "http" : "https";
 
@@ -50,7 +50,8 @@ internal class Program
         builder.Services.AddSingleton<App>();
         builder.Services.AddSingleton<MainPage>();
         */
-        
+
+        /*        
         using
             ILoggerFactory loggerFactory = LoggerFactory.Create
                                                             (
@@ -69,12 +70,11 @@ internal class Program
         ILogger<Program> logger = loggerFactory.CreateLogger < Program > ();
 
         logger.LogInformation("Hello from OpenTelemetry");
+        */
 
-
-
+        /*
         Meter MauiMeter = new("ConsoleDemo.Metrics", "1.0");
 
-        Counter<long> RequestCounter = MauiMeter.CreateCounter<long>("RequestCounter");
 
         using MeterProvider meterProvider = Sdk
                                                 .CreateMeterProviderBuilder()
@@ -82,12 +82,15 @@ internal class Program
                                                 .AddConsoleExporter()
                                                 .Build();
 
+        Counter<long> RequestCounter = MauiMeter.CreateCounter<long>("RequestCounter");
         RequestCounter.Add(1, new KeyValuePair<string, object?>("POST Request", HttpMethod.Post));
         RequestCounter.Add(1, new KeyValuePair<string, object?>("GET Request", HttpMethod.Get));
         RequestCounter.Add(1, new KeyValuePair<string, object?>("GET Request", HttpMethod.Get));
         RequestCounter.Add(1, new KeyValuePair<string, object?>("POST Request", HttpMethod.Post));
         RequestCounter.Add(1, new KeyValuePair<string, object?>("PUT Request", HttpMethod.Put));
+        */
 
+        /*
         const string serviceName = "maui-telemetry";
 
         builder.Logging.AddOpenTelemetry
@@ -114,15 +117,16 @@ internal class Program
                                 .AddGrpcClientInstrumentation()
                                 .AddConsoleExporter()
                         )
-                    .WithMetrics
-                        (
-                            metrics =>
-                            metrics
-                                .AddHttpClientInstrumentation()
-                                .AddConsoleExporter()
-                        );
+                    // .WithMetrics
+                    //     (
+                    //         metrics =>
+                    //         metrics
+                    //             .AddHttpClientInstrumentation()
+                    //             .AddConsoleExporter()
+                    //     )
+                        ;
 
-
+        */
 
         IHost app_host = builder.Build();
 
