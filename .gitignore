@@ -19,7 +19,10 @@ output/
 **/.idea
 
 # Visual Studio Code Extensions
-**/.metor
+**/.meteor
+
+# Cake
+tools/
 
 # Cake
 tools/
