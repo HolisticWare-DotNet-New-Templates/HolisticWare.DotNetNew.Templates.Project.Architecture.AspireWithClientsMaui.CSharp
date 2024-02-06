@@ -12,8 +12,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientAppsIntegration.AppDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.MAUI", "ClientAppsIntegration.MAUI\ClientAppsIntegration.MAUI.csproj", "{454A7296-D63E-4802-B436-A15933467D05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Tools.Aspire.Hosting.Clients.Maui", "..\..\..\..\source\HolisticWare.Tools.Aspire.Hosting.Clients.Maui\HolisticWare.Tools.Aspire.Hosting.Clients.Maui.csproj", "{E77F19FD-C0C4-49C4-A79B-34798D57831B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,10 +40,6 @@ Global
 		{454A7296-D63E-4802-B436-A15933467D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{454A7296-D63E-4802-B436-A15933467D05}.Release|Any CPU.Build.0 = Release|Any CPU
 		{454A7296-D63E-4802-B436-A15933467D05}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{E77F19FD-C0C4-49C4-A79B-34798D57831B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E77F19FD-C0C4-49C4-A79B-34798D57831B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E77F19FD-C0C4-49C4-A79B-34798D57831B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E77F19FD-C0C4-49C4-A79B-34798D57831B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

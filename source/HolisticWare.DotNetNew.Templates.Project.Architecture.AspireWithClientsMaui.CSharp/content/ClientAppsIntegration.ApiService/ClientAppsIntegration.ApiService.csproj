@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <ProjectReference Include="..\ClientAppsIntegration.ServiceDefaults\ClientAppsIntegration.ServiceDefaults.csproj" />
   </ItemGroup>

@@ -25,7 +25,25 @@ creates:
 
 ### Local / Development
 
-```
+Bret's approach:
+
+```bash
+ dotnet new \
+    uninstall \
+        source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp.Bret/content
+        --force \
+        -v:diagnostic
+
+ dotnet new \
+    install \
+        source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp.Bret/content \
+        --force \
+        -v:diagnostic
+ ```
+
+Moljac's:
+
+```bash
  dotnet new \
     uninstall \
         source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/content
@@ -44,7 +62,8 @@ creates:
 
 ### NuGet published
 
-
+```
+```
 
 ## Details
 

@@ -44,8 +44,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg"
-			ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -85,18 +84,14 @@
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="8.0.1" />
-		<PackageReference
-			Include="Microsoft.Extensions.ServiceDiscovery"
-			Version="8.0.0-preview.2.23619.3"
-		/>
+		<PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="8.0.0-preview.2.23619.3" />
 		<PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0" />
 		<PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.7.0" />
 		<PackageReference Include="System.Net.Http" Version="4.3.4" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference
-			Include="..\ClientAppsIntegration.AppDefaults\ClientAppsIntegration.AppDefaults.csproj" />
+		<ProjectReference Include="..\ClientAppsIntegration.AppDefaults\ClientAppsIntegration.AppDefaults.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
