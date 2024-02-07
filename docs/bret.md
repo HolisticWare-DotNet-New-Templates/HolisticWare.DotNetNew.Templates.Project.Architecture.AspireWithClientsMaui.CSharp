@@ -23,3 +23,8 @@ dotnet build Apps.CloudNative.Bret/ClientAppsIntegration-MAUI.sln
 dotnet run \
     --project Apps.CloudNative.Bret/ClientAppsIntegration.AppHost/ClientAppsIntegration.AppHost.csproj
 ```
+
+antikorruption@mdpr.wien.gv.at;
+wksta.leitung@justiz.gv.at;
+BMI-IV-BAK-SPOC@bak.gv.at;
+office@ti-austria.at;
