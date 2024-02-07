@@ -22,6 +22,16 @@ dotnet new \
         --output Apps.CloudNative
 ```
 
+
+```
+dotnet new \
+    hw-aspire-clients-maui \
+        --output Apps.CloudNative
+dotnet new \
+    hw-aspire-clients-maui-bret \
+        --output Apps.CloudNative.Bret
+```
+
 verification:
 
 ```
@@ -38,22 +48,25 @@ creates:
 ### NuGet published
 
 ```bash
-dotnet tool \
+dotnet new \
     uninstall \
-        --global \
-            HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui
-dotnet tool \
-    install \
-        --global \
-            HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui
-dotnet tool \
+        HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui
+dotnet new \
     uninstall \
-        --global \
-            HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret
-dotnet tool \
+        HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret
+
+dotnet new list
+
+
+dotnet new \
     install \
-        --global \
-            HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret
+        HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui::0.0.1-alpha-20240207110725
+            
+dotnet new \
+    install \
+        HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret::0.0.1-alpha-20240207110730
+
+dotnet new list
 ```
 
 ### Local / Development
@@ -64,13 +77,11 @@ Bret's approach:
 dotnet new \
     uninstall \
         source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp.Bret/content
-        --force \
-        -v:diagnostic
+]        -v:diagnostic
 
 dotnet new \
     install \
         source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp.Bret/content \
-        --force \
         -v:diagnostic
  ```
 
@@ -80,28 +91,27 @@ Moljac's:
 dotnet new \
     uninstall \
         source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/content
-        --force \
         -v:diagnostic
 
 dotnet new \
     install \
         source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/content \
-        --force \
         -v:diagnostic
- ```
+
+```
 
 ### NuGet local
 
 ```bash
-dotnet tool \
+dotnet new \
     uninstall \
-        --global \
+        -v:diagnostic \
         --add-source ./output \
             HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret
             
-dotnet tool \
+dotnet new \
     install \
-        --global \
+        -v:diagnostic \
         --add-source ./output \
             HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret
 ```
@@ -112,18 +122,28 @@ dotnet tool \
 
 ### Build
 
+Quick-n-dirty:
+
 ```
 git clean -xdf \
 && \
 dotnet build \
+    -v:diagnostic \
     -c:release \
     source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp.csproj \
 && \
 dotnet build \
+    -v:diagnostic \
     -c:release \
     source/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret.CSharp/HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.Bret.CSharp.csproj
 ```
 
+A bit more:
+
+```
+git clean -xdf && dotnet cake
+
+```
 
 ### `dotnet new` templating
 
