@@ -15,9 +15,14 @@
             "cloud",
             "productivity",
             "experimental",
+            "aspire",
+            "maui",
+            "integration",
+            "Bret",
         ],
     "groupIdentity": "HolisticWare.Tools.Templates",
-    "name": "Custom template for Aspire and clients MAUI integration",
+    // must be unique
+    "name": "Custom template for Aspire and clients MAUI integration - Bret",
     // A unique ID for the project template.
     "identity": "HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui.CSharp.Bret",
     // for commandline project creation
