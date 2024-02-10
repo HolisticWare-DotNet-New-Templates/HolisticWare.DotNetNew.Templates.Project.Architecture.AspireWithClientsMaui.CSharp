@@ -1,3 +1,6 @@
+# Template Mel
+
+mel-moljac.md
 
 
 ```bash
@@ -14,8 +17,9 @@ dotnet new \
 
 dotnet new \
     install \
-        HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui::0.0.1-alpha-20240207110725
+        HolisticWare.DotNetNew.Templates.Project.Architecture.AspireWithClientsMaui::0.0.1-alpha-20240207114335
 
+rm -fr Apps.CloudNative/
 dotnet new \
     hw-aspire-clients-maui \
         --output Apps.CloudNative
@@ -29,3 +33,10 @@ dotnet run \
 ```
 
 
+
+```xml
+	<PropertyGroup>
+		<EnableSplashScreenProcessing>false</EnableSplashScreenProcessing>
+	</PropertyGroup>
+
+```
