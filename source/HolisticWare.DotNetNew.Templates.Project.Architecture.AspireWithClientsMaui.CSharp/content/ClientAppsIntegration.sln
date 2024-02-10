@@ -12,6 +12,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientAppsIntegration.AppDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.MAUI", "ClientAppsIntegration.MAUI\ClientAppsIntegration.MAUI.csproj", "{454A7296-D63E-4802-B436-A15933467D05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.MAUI.Blazor", "ClientAppsIntegration.MAUI.Blazor\ClientAppsIntegration.MAUI.Blazor.csproj", "{93442470-FE98-4F4F-96FF-FBAE51C55716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.Console", "ClientAppsIntegration.Console\ClientAppsIntegration.Console.csproj", "{79F11440-AF54-407F-B59F-A930957A6DCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +44,14 @@ Global
 		{454A7296-D63E-4802-B436-A15933467D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{454A7296-D63E-4802-B436-A15933467D05}.Release|Any CPU.Build.0 = Release|Any CPU
 		{454A7296-D63E-4802-B436-A15933467D05}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{93442470-FE98-4F4F-96FF-FBAE51C55716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93442470-FE98-4F4F-96FF-FBAE51C55716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93442470-FE98-4F4F-96FF-FBAE51C55716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93442470-FE98-4F4F-96FF-FBAE51C55716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79F11440-AF54-407F-B59F-A930957A6DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F11440-AF54-407F-B59F-A930957A6DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F11440-AF54-407F-B59F-A930957A6DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F11440-AF54-407F-B59F-A930957A6DCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

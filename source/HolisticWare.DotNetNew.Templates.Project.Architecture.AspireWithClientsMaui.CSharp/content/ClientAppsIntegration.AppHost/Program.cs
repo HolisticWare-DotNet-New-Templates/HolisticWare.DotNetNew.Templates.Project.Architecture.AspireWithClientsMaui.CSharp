@@ -12,12 +12,37 @@ var apiService = builder.AddProject<Projects.ClientAppsIntegration_ApiService>("
 // coordinate a build dependency though).
 
 string project_maui = @"..\\ClientAppsIntegration.MAUI\\ClientAppsIntegration.MAUI.csproj";
+string project_maui_blazor = @"..\\ClientAppsIntegration.MAUI.Blazor\\ClientAppsIntegration.MAUI.Blazor.csproj";
+
+builder
+   .AddProject
+         (
+            "frontend_client_console",
+            @"..\\ClientAppsIntegration.Console\\ClientAppsIntegration.Console.csproj"
+         )
+         .WithReference(apiService);
 
 builder
    .AddProject
          (
             "frontend_client_maui",
             project_maui,
+            // overload added just to avoid ambigious call and leave the method name as is
+            // without this parameter - ambigious call
+            new[] 
+            {
+               "net8.0-android",
+               "net8.0-ios",
+               "net8.0-maccatalyst",
+            }
+         )
+         .WithReference(apiService);
+
+builder
+   .AddProject
+         (
+            "frontend_client_maui_blazor",
+            project_maui_blazor,
             // overload added just to avoid ambigious call and leave the method name as is
             // without this parameter - ambigious call
             new[] 

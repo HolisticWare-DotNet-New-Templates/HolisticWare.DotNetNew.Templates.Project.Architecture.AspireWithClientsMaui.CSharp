@@ -11,6 +11,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\ClientAppsIntegration.ApiService\ClientAppsIntegration.ApiService.csproj" />
 		<ProjectReference Include="..\ClientAppsIntegration.MAUI\ClientAppsIntegration.MAUI.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\ClientAppsIntegration.MAUI.Blazor\ClientAppsIntegration.MAUI.Blazor.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\ClientAppsIntegration.Console\ClientAppsIntegration.Console.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
