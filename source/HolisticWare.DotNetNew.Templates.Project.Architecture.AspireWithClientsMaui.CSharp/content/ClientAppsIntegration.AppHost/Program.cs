@@ -68,7 +68,7 @@ builder
             "Pixel_3a_API_34_extension_level_7_arm64-v8a"
          )         
    /*
-   Launching 2 emulators does not work yet
+   Launching n=2 emulators does not work yet
    .BuildClient
          (
             "net8.0-android",
