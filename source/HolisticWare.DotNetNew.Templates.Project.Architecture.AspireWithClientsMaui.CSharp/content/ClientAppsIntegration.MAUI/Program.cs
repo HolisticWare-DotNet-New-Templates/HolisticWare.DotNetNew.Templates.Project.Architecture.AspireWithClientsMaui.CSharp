@@ -8,9 +8,11 @@ using System.Diagnostics.Metrics;
 using System.Net.Http;
 
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Logs;
@@ -25,6 +27,40 @@ internal class Program
     // This is the main entry point of the application.
     public static void Main(string[] args)
     {
+        // Register your appsettings.json config file
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+                                                            .AddJsonFile
+                                                                (
+                                                                    Path.Combine("Properties", "appsettings.json"), 
+                                                                    optional: true, 
+                                                                    reloadOnChange: true
+                                                                )
+                                                            .Build();
+
+        // Create a service provider registering the service discovery and HttpClient extensions
+        ServiceProvider provider = new ServiceCollection()
+                                                .AddServiceDiscovery()
+                                                .AddHttpClient()
+                                                .AddSingleton<IConfiguration>(configuration)
+                                                .ConfigureHttpClientDefaults
+                                                    (
+                                                        static http =>
+                                                        {
+                                                            // Configure the HttpClient to use service discovery
+                                                            http.UseServiceDiscovery();
+                                                        }
+                                                    )
+                                                .BuildServiceProvider();
+
+        // Grab a new client from the service provider
+        HttpClient client = provider.GetService<HttpClient>()!;
+
+        // Call an API called `apiservice` using service discovery
+        HttpResponseMessage response = client.GetAsync("http://apiservice/weatherforecast").Result;
+        string body = response.Content.ReadAsStringAsync().Result;
+
+        Console.WriteLine(body);
+
         // -------------------------------------------------------------------------------------------------------------
         // Hosting
         //  start

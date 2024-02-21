@@ -5,7 +5,14 @@ HolisticWare.Tools.Devices.Android.Emulator.Launch("Pixel_3a_API_34_extension_le
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-var apiService = builder.AddProject<Projects.ClientAppsIntegration_ApiService>("apiservice");
+var api_service = builder.AddProject<Projects.ClientAppsIntegration_ApiService>("apiservice");
+
+builder
+      .AddProject<Projects.ClientAppsIntegration_Web>
+                                    (
+                                        "webfrontend"
+                                    )
+                                    .WithReference(apiservice);
 
 // Register the client apps by project path as they target a TFM incompatible with the AppHost so can't be added as
 // regular project references (see the AppHost.csproj file for additional metadata added to the ProjectReference to
@@ -20,7 +27,7 @@ builder
             "frontend_client_console",
             @"..\\ClientAppsIntegration.Console\\ClientAppsIntegration.Console.csproj"
          )
-         .WithReference(apiService);
+         .WithReference(api_service);
 
 builder
    .AddProject
@@ -36,7 +43,7 @@ builder
                "net8.0-maccatalyst",
             }
          )
-         .WithReference(apiService);
+         .WithReference(api_service);
 
 builder
    .AddProject
@@ -52,7 +59,7 @@ builder
                "net8.0-maccatalyst",
             }
          )
-         .WithReference(apiService);
+         .WithReference(api_service);
 
 builder
    .BuildClient
