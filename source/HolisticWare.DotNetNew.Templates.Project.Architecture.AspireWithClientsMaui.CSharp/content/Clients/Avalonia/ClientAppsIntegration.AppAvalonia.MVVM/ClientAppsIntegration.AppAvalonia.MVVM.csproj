@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.0.6" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.6" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.6" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.5.0" />
+	</ItemGroup>
+	
+	<!--
+	====================================================================================================================
+  	MAUI integration
+    	start
+	-->
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Common\ClientAppsIntegration.AppDefaults\ClientAppsIntegration.AppDefaults.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="8.0.0-preview.3.24105.21" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="8.0.1" />
+		<PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0" />
+		<PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.7.0" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="HolisticWare.Tools.Clients.Maui.Aspire.Integration" Version="0.0.1-alpha-20240202130217" />
+	</ItemGroup>
+		<ItemGroup>
+		<Using Include="System.Net.Http" />
+		<Using Include="System.Net.Http.Json" />
+		<Using Include="Microsoft.Extensions.Hosting" />
+		<Using Include="Microsoft.Extensions.DependencyInjection" />
+		<Using Include="Microsoft.Extensions.Logging" />
+	</ItemGroup>
+
+	<!--
+	<ItemGroup>
+		<None Remove="Properties\appsettings.json;Properties\appsettings.*.json" />
+		<Content Include="Properties\appsettings.json;Properties\appsettings.*.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+		</Content>
+	</ItemGroup>
+	-->
+	<!-- 
+    stop
+  MAUI integration
+	====================================================================================================================
+  -->
+
+  
+</Project>

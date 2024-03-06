@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"ClientAppsIntegration.AppUNO.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"ClientAppsIntegration.AppUNO.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}

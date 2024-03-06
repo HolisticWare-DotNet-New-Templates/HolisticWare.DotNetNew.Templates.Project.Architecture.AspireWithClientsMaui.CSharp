@@ -9,11 +9,16 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ClientAppsIntegration.Web\ClientAppsIntegration.Web.csproj" />
-		<ProjectReference Include="..\ClientAppsIntegration.ApiService\ClientAppsIntegration.ApiService.csproj" />
-		<ProjectReference Include="..\ClientAppsIntegration.MAUI\ClientAppsIntegration.MAUI.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
-		<ProjectReference Include="..\ClientAppsIntegration.MAUI.Blazor\ClientAppsIntegration.MAUI.Blazor.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
-		<ProjectReference Include="..\ClientAppsIntegration.Console\ClientAppsIntegration.Console.csproj" />
+		<ProjectReference Include="..\ServersBackends\ClientAppsIntegration.Web\ClientAppsIntegration.Web.csproj" />
+		<ProjectReference Include="..\ServersBackends\ClientAppsIntegration.ApiService\ClientAppsIntegration.ApiService.csproj" />
+		<ProjectReference Include="..\Clients\MAUI\ClientAppsIntegration.MAUI.Simple\ClientAppsIntegration.MAUI.Simple.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\Clients\MAUI\ClientAppsIntegration.MAUI.Refactored\ClientAppsIntegration.MAUI.Refactored.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\Clients\Console\ClientAppsIntegration.AppConsole\ClientAppsIntegration.AppConsole.csproj" />
+		<ProjectReference Include="..\Clients\Avalonia\ClientAppsIntegration.AppAvalonia\ClientAppsIntegration.AppAvalonia.csproj" />
+		<ProjectReference Include="..\Clients\Avalonia\ClientAppsIntegration.AppAvalonia.MVVM\ClientAppsIntegration.AppAvalonia.MVVM.csproj" />
+		<!-- 
+		<ProjectReference Include="..\Clients\MAUI\ClientAppsIntegration.MAUI.Blazor\ClientAppsIntegration.MAUI.Blazor.csproj" SkipGetTargetFrameworkProperties="true" ReferenceOutputAssembly="false" />
+		-->
 	</ItemGroup>
 
 	<ItemGroup>

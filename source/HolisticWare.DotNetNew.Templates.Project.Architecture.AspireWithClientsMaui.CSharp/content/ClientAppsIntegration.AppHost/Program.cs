@@ -1,7 +1,7 @@
 ﻿using HolisticWare.Aspire.Hosting.Maui;
 
 // HolisticWare.Tools.Devices.Android.Emulator.Launch("nexus_9_api_33");
-HolisticWare.Tools.Devices.Android.Emulator.Launch("Pixel_3a_API_34_extension_level_7_arm64-v8a");
+HolisticWare.Tools.Devices.Android.Emulator.Launch("emulator-android-34-google-apis-arm-v8a-pixel");
 
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -18,22 +18,26 @@ var web_frontnend = builder
 // regular project references (see the AppHost.csproj file for additional metadata added to the ProjectReference to
 // coordinate a build dependency though).
 
-string project_maui = @"..\\ClientAppsIntegration.MAUI\\ClientAppsIntegration.MAUI.csproj";
-string project_maui_blazor = @"..\\ClientAppsIntegration.MAUI.Blazor\\ClientAppsIntegration.MAUI.Blazor.csproj";
+string project_maui_simple = @"..\\Clients\\MAUI\\ClientAppsIntegration.MAUI.Simple\\ClientAppsIntegration.MAUI.Simple.csproj";
+string project_maui_refactored = @"..\\Clients\\MAUI\\ClientAppsIntegration.MAUI.Refactored\\ClientAppsIntegration.MAUI.Refactored.csproj";
+string project_maui_blazor = @"..\\Clients\\MAUI\\ClientAppsIntegration.MAUI.Blazor\\ClientAppsIntegration.MAUI.Blazor.csproj";
+
+string project_avalonia = @"..\\Clients\\Avalonia\\ClientAppsIntegration.Avalonia\\ClientAppsIntegration.Avalonia.csproj";
+string project_avalonia_mvvm = @"..\\Clients\\Avalonia\\ClientAppsIntegration.Avalonia.MVVM\\ClientAppsIntegration.Avalonia.MVVM.csproj";
 
 builder
    .AddProject
          (
             "frontend_client_console",
-            @"..\\ClientAppsIntegration.Console\\ClientAppsIntegration.Console.csproj"
+            @"..\\Clients\\Console\\ClientAppsIntegration.Console\\ClientAppsIntegration.Console.csproj"
          )
          .WithReference(apiservice);
 
 builder
    .AddProject
          (
-            "frontend_client_maui",
-            project_maui,
+            "frontend_client_maui_simple",
+            project_maui_simple,
             // overload added just to avoid ambigious call and leave the method name as is
             // without this parameter - ambigious call
             new[] 
@@ -44,6 +48,26 @@ builder
             }
          )
          .WithReference(apiservice);
+
+builder
+   .AddProject
+         (
+            "frontend_client_maui_refactored",
+            project_maui_refactored,
+            // overload added just to avoid ambigious call and leave the method name as is
+            // without this parameter - ambigious call
+            new[] 
+            {
+               "net8.0-android",
+               "net8.0-ios",
+               "net8.0-maccatalyst",
+            }
+         )
+         .WithReference(apiservice);
+
+/*
+Problems - not working yet - MAUI Blazor
+must recreate projects
 
 builder
    .AddProject
@@ -60,12 +84,34 @@ builder
             }
          )
          .WithReference(apiservice);
+*/
+
+builder
+   .AddProject
+         (
+            "frontend_client_avalonia",
+            project_avalonia
+         )
+         .WithReference(apiservice);
+
+builder
+   .AddProject
+         (
+            "frontend_client_avalonia_mvvm",
+            project_avalonia_mvvm
+         )
+         .WithReference(apiservice);
+
+
+
+
+
 
 builder
    .BuildClient
          (
             "net8.0-android",
-            "Pixel_3a_API_34_extension_level_7_arm64-v8a"
+            "emulator-android-34-google-apis-arm-v8a-pixel_xl"
          )         
    /*
    Launching n=2 emulators does not work yet
