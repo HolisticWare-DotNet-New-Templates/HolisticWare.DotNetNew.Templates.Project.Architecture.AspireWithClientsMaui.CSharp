@@ -45,11 +45,18 @@ sealed class Program
         // Grab a new client from the service provider
         HttpClient client = provider.GetService<HttpClient>()!;
 
-        // Call an API called `apiservice` using service discovery
-        HttpResponseMessage response = client.GetAsync("http://apiservice/weatherforecast").Result;
-        string body = response.Content.ReadAsStringAsync().Result;
+        try
+        {
+            // Call an API called `apiservice` using service discovery
+            HttpResponseMessage response = client.GetAsync("http://apiservice/weatherforecast").Result;
+            string body = response.Content.ReadAsStringAsync().Result;
 
-        Console.WriteLine(body);
+            Console.WriteLine(body);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
 
         BuildAvaloniaApp()
             .StartWithClassicDesktopLifetime(args);

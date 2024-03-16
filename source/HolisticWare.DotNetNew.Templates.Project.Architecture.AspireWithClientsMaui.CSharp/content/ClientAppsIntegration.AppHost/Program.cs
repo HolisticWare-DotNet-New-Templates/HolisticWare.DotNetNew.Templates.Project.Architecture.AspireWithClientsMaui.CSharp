@@ -22,14 +22,14 @@ string project_maui_simple = @"..\\Clients\\MAUI\\ClientAppsIntegration.MAUI.Sim
 string project_maui_refactored = @"..\\Clients\\MAUI\\ClientAppsIntegration.MAUI.Refactored\\ClientAppsIntegration.MAUI.Refactored.csproj";
 string project_maui_blazor = @"..\\Clients\\MAUI\\ClientAppsIntegration.MAUI.Blazor\\ClientAppsIntegration.MAUI.Blazor.csproj";
 
-string project_avalonia = @"..\\Clients\\Avalonia\\ClientAppsIntegration.Avalonia\\ClientAppsIntegration.Avalonia.csproj";
-string project_avalonia_mvvm = @"..\\Clients\\Avalonia\\ClientAppsIntegration.Avalonia.MVVM\\ClientAppsIntegration.Avalonia.MVVM.csproj";
+string project_avalonia = @"..\\Clients\\Avalonia\\ClientAppsIntegration.AppAvalonia\\ClientAppsIntegration.AppAvalonia.csproj";
+string project_avalonia_mvvm = @"..\\Clients\\Avalonia\\ClientAppsIntegration.AppAvalonia.MVVM\\ClientAppsIntegration.AppAvalonia.MVVM.csproj";
 
 builder
    .AddProject
          (
             "frontend_client_console",
-            @"..\\Clients\\Console\\ClientAppsIntegration.Console\\ClientAppsIntegration.Console.csproj"
+            @"..\\Clients\\Console\\ClientAppsIntegration.AppConsole\\ClientAppsIntegration.AppConsole.csproj"
          )
          .WithReference(apiservice);
 
