@@ -1,7 +1,16 @@
-﻿using HolisticWare.Aspire.Hosting.Maui;
+﻿using Aspire.Hosting;
+using HolisticWare.Aspire.Hosting.Maui;
 
-// HolisticWare.Tools.Devices.Android.Emulator.Launch("nexus_9_api_33");
-HolisticWare.Tools.Devices.Android.Emulator.Launch("emulator-android-34-google-apis-arm-v8a-pixel");
+/*
+emulator-android-34-google-apis-arm-v8a-Tablet
+emulator-android-34-google-apis-arm-v8a-pixel
+emulator-android-34-google-apis-arm-v8a-pixel_c
+emulator-android-34-google-apis-arm-v8a-pixel_xl
+*/
+string android_tablet="emulator-android-34-google-apis-arm-v8a-Tablet";
+string android_phone="emulator-android-34-google-apis-arm-v8a-pixel";
+HolisticWare.Tools.Devices.Android.Emulator.Launch(android_phone);
+HolisticWare.Tools.Devices.Android.Emulator.Launch(android_tablet);
 
 var builder = DistributedApplication.CreateBuilder(args);
 

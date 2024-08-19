@@ -47,7 +47,7 @@ internal class Program
                                                         static http =>
                                                         {
                                                             // Configure the HttpClient to use service discovery
-                                                            http.UseServiceDiscovery();
+                                                            http.AddServiceDiscovery();
                                                         }
                                                     )
                                                 .BuildServiceProvider();

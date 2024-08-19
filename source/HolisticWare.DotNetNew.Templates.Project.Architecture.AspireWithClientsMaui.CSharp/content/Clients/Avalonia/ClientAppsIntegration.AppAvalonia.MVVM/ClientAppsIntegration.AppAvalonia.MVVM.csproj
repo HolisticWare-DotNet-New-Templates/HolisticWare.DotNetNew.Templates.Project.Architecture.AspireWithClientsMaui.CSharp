@@ -41,24 +41,24 @@
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="8.0.0-preview.3.24105.21" />
+		<PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="8.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="8.0.1" />
-		<PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0" />
-		<PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.7.0" />
+		<PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.9.0" />
+		<PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.9.0" />
 		<PackageReference Include="System.Net.Http" Version="4.3.4" />
 	</ItemGroup>
 
-
 	<ItemGroup>
-		<PackageReference Include="HolisticWare.Tools.Clients.Maui.Aspire.Integration" Version="0.0.1-alpha-20240202130217" />
-	</ItemGroup>
-		<ItemGroup>
 		<Using Include="System.Net.Http" />
 		<Using Include="System.Net.Http.Json" />
 		<Using Include="Microsoft.Extensions.Hosting" />
 		<Using Include="Microsoft.Extensions.DependencyInjection" />
 		<Using Include="Microsoft.Extensions.Logging" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="HolisticWare.Tools.Clients.Maui.Aspire.Integration" Version="0.0.1-alpha-20240202130217" />
 	</ItemGroup>
 
 	<!--

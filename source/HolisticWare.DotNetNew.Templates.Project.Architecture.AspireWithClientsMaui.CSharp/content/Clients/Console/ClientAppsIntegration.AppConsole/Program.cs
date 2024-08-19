@@ -22,7 +22,7 @@ ServiceProvider provider = new ServiceCollection()
                                                 static http =>
                                                 {
                                                     // Configure the HttpClient to use service discovery
-                                                    http.UseServiceDiscovery();
+                                                    http.AddServiceDiscovery();
                                                 }
                                             )
                                         .BuildServiceProvider();

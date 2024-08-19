@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.Web",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.ApiService", "ServersBackends\ClientAppsIntegration.ApiService\ClientAppsIntegration.ApiService.csproj", "{D2449985-D0B3-4E99-B263-DB2115FF6F79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.AppAvalonia.MVVM", "Clients\Avalonia\ClientAppsIntegration.AppAvalonia.MVVM\ClientAppsIntegration.AppAvalonia.MVVM.csproj", "{44DD14C5-DB8A-48D9-8EFC-8B32B394BE34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAppsIntegration.AppAvalonia", "Clients\Avalonia\ClientAppsIntegration.AppAvalonia\ClientAppsIntegration.AppAvalonia.csproj", "{1FE9FD75-7F42-4B4D-BEC2-EB297F903D0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -76,6 +80,14 @@ Global
 		{D2449985-D0B3-4E99-B263-DB2115FF6F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2449985-D0B3-4E99-B263-DB2115FF6F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2449985-D0B3-4E99-B263-DB2115FF6F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44DD14C5-DB8A-48D9-8EFC-8B32B394BE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DD14C5-DB8A-48D9-8EFC-8B32B394BE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DD14C5-DB8A-48D9-8EFC-8B32B394BE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DD14C5-DB8A-48D9-8EFC-8B32B394BE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE9FD75-7F42-4B4D-BEC2-EB297F903D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE9FD75-7F42-4B4D-BEC2-EB297F903D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE9FD75-7F42-4B4D-BEC2-EB297F903D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE9FD75-7F42-4B4D-BEC2-EB297F903D0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,5 +108,7 @@ Global
 		{A862DD4B-A61C-4BC5-8639-FA6E9AFC7BA8} = {3FD6876A-5F61-4D9A-9C39-2C9CE1318A11}
 		{885881DA-DBF6-4F06-914F-C2AA969989DC} = {D84FE891-A31C-418E-AB6F-19DA094C9999}
 		{D2449985-D0B3-4E99-B263-DB2115FF6F79} = {D84FE891-A31C-418E-AB6F-19DA094C9999}
+		{44DD14C5-DB8A-48D9-8EFC-8B32B394BE34} = {437123E5-4C69-477F-B3AA-6F4F86E3B464}
+		{1FE9FD75-7F42-4B4D-BEC2-EB297F903D0B} = {437123E5-4C69-477F-B3AA-6F4F86E3B464}
 	EndGlobalSection
 EndGlobal
